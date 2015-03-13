@@ -24,7 +24,7 @@ namespace SmapleProject
     [Header("browser", "version", "platform")] // name of the parameters in the rows
     [Row("firefox", "36.0", "WINDOWS")] // run all tests in the fixture against firefox 36 for windows 7
     //[Row("internet explorer", "11.0", "WINDOWS")] // run all tests in the fixture against iexplore 11 for windows 7
-    //[Row("chrome", "41.0", "WINDOWS")]
+    [Row("chrome", "41.0", "WINDOWS")]
     //[Row("chrome", "41.0", "WINDOWS")]
     #endregion
     [Parallelizable]
@@ -100,8 +100,8 @@ namespace SmapleProject
         {
             IWebDriver driver = _Setup(browser, version, platform);
             driver.Navigate().GoToUrl(baseURL + "/");
-            //driver.FindElement(By.Id("lst-ib")).Clear();
-            //driver.FindElement(By.Id("lst-ib")).SendKeys("Testing");
+            driver.FindElement(By.Id("lst-ib")).Clear();
+            driver.FindElement(By.Id("lst-ib")).SendKeys("Testing");
 
             //string test = driver.FindElement(By.Id("lst-ib")).GetAttribute("value");
             //string test2 = driver.FindElement(By.Id("lst-ib")).GetAttribute("class");
@@ -113,7 +113,7 @@ namespace SmapleProject
             //driver.FindElement(By.XPath("//img[contains(@src,’Profile’)]"));
             //Actions action = new Actions(driver);
             //SelectElement selector = new SelectElement(e1);
-            driver.FindElements(By.LinkText("Services")).Where(r => r.Displayed).ToArray(); ;
+            //driver.FindElements(By.LinkText("Services")).Where(r => r.Displayed).ToArray(); ;
             //IWebElement e2 = driver.FindElement(By.Name("destination"));
             //action.ContextClick(e1).Perform();
             Thread.Sleep(TimeSpan.FromSeconds(5));
