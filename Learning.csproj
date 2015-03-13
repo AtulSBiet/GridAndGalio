@@ -57,14 +57,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="ThoughtWorks.Selenium.Core">
-      <HintPath>..\..\net40\ThoughtWorks.Selenium.Core.dll</HintPath>
+    <Reference Include="WebDriver, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\selenium-dotnet-2.45.0\net40\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver">
-      <HintPath>..\..\net40\WebDriver.dll</HintPath>
-    </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\..\net40\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\selenium-dotnet-2.45.0\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +78,23 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="lib\net40\Selenium.WebDriverBackedSelenium.dll" />
+    <Content Include="lib\net40\Selenium.WebDriverBackedSelenium.pdb" />
+    <Content Include="lib\net40\Selenium.WebDriverBackedSelenium.xml" />
+    <Content Include="lib\net40\ThoughtWorks.Selenium.Core.dll" />
+    <Content Include="lib\net40\ThoughtWorks.Selenium.Core.pdb" />
+    <Content Include="lib\net40\ThoughtWorks.Selenium.Core.xml" />
+    <Content Include="lib\net40\WebDriver.dll" />
+    <Content Include="lib\net40\WebDriver.pdb" />
+    <Content Include="lib\net40\WebDriver.Support.dll" />
+    <Content Include="lib\net40\WebDriver.Support.pdb" />
+    <Content Include="lib\net40\WebDriver.Support.xml" />
+    <Content Include="lib\net40\WebDriver.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screenshots\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
