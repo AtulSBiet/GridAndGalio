@@ -42,8 +42,7 @@ namespace SmapleProject
         public void SetupTest()
         {
             //driver = new FirefoxDriver();
-            //baseURL = "http://google.co.in";
-            baseURL = "http://verticallogics.com";
+            baseURL = "http://google.co.in";
             verificationErrors = new StringBuilder();
         }
 
