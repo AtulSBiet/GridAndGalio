@@ -32,14 +32,14 @@
   <ItemGroup>
     <Reference Include="Gallio, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Gallio\bin\Gallio.dll</HintPath>
+      <HintPath>%Program Files%\Gallio\bin\Gallio.dll</HintPath>
     </Reference>
     <Reference Include="MbUnit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Gallio\bin\MbUnit.dll</HintPath>
+      <HintPath>%Program Files%\Gallio\bin\MbUnit.dll</HintPath>
     </Reference>
     <Reference Include="Selenium.WebDriverBackedSelenium">
-      <HintPath>..\..\..\..\Program Files (x86)\selenium-dotnet-2.45.0\net40\Selenium.WebDriverBackedSelenium.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\selenium-dotnet-2.45.0\net40\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="WebDriver, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\selenium-dotnet-2.45.0\net40\WebDriver.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\selenium-dotnet-2.45.0\net40\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\selenium-dotnet-2.45.0\net40\WebDriver.Support.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\selenium-dotnet-2.45.0\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
