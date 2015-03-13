@@ -115,7 +115,7 @@ namespace SmapleProject
             //driver.FindElements(By.LinkText("Services")).Where(r => r.Displayed).ToArray(); ;
             //IWebElement e2 = driver.FindElement(By.Name("destination"));
             //action.ContextClick(e1).Perform();
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            //Thread.Sleep(TimeSpan.FromSeconds(5));
             CleanUp(driver);
         }
 
