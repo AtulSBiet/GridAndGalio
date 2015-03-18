@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions">
+      <HintPath>packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core">
+      <HintPath>packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Gallio, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>%Program Files%\Gallio\bin\Gallio.dll</HintPath>
@@ -72,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screenshots\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

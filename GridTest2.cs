@@ -16,18 +16,19 @@ using System.IO;
 using SeleniumUtil;
 using OpenQA.Selenium.IE;
 using System.Linq;
+using FluentAssertions;
 
 
 namespace SmapleProject
 {
     #region Grid Parallelism Attributes
-    [Header("browser", "version", "platform")] // name of the parameters in the rows
-    [Row("firefox", "36.0", "WINDOWS")] // run all tests in the fixture against firefox 36 for windows 7
+    //[Header("browser", "version", "platform")] // name of the parameters in the rows
+    //[Row("firefox", "36.0", "WINDOWS")] // run all tests in the fixture against firefox 36 for windows 7
     //[Row("internet explorer", "11.0", "WINDOWS")] // run all tests in the fixture against iexplore 11 for windows 7
-    [Row("chrome", "41.0", "WINDOWS")]
+    //[Row("chrome", "41.0", "WINDOWS")]
     //[Row("chrome", "41.0", "WINDOWS")]
     #endregion
-    [Parallelizable]
+    //[Parallelizable]
     [Category("First")]
     [TestFixture]
     public class GridTest2
@@ -49,15 +50,15 @@ namespace SmapleProject
         private IWebDriver _Setup(string browser, string version, string platform)
         {
             /****Grid****/
-            IWebDriver driver = StartGridDriver(browser, version, platform);
+            //IWebDriver driver = StartGridDriver(browser, version, platform);
             /****DriverEventMgmt****/
-            //IWebDriver driver = StartEventFiringDriver();
+            IWebDriver driver = StartEventFiringDriver();
             return driver;
         }
 
         private IWebDriver StartEventFiringDriver()
         {
-            EventFiringWebDriver firingDriver = new EventFiringWebDriver(new ChromeDriver());
+            EventFiringWebDriver firingDriver = new EventFiringWebDriver(new FirefoxDriver());
             IWebDriver driver = firingDriver;
             firingDriver.ExceptionThrown += (sender, e) => firingDriver_TakeScreenshotOnException(sender, e, driver);
 
@@ -94,14 +95,19 @@ namespace SmapleProject
         //}
 
 
-        [Test, Parallelizable]
-        public void GoogleTest(string browser, string version, string platform)
+        //[Test, Parallelizable]
+        [Test]
+        public void GoogleTest()
+        //public void GoogleTest(string browser, string version, string platform)
         {
-            IWebDriver driver = _Setup(browser, version, platform);
+            //IWebDriver driver = _Setup(browser, version, platform);
+            IWebDriver driver = _Setup("NoIP", "NoIP", "NoIP");
             driver.Navigate().GoToUrl(baseURL + "/");
             driver.FindElement(By.Id("lst-ib")).Clear();
             driver.FindElement(By.Id("lst-ib")).SendKeys("Testing");
-
+            driver.FindElement(By.Id("body")).SendKeys(Keys.Control + "t");
+            driver.FindElement(By.Id("body")).Text.Should().Contain("").And.StartWith("").And.EndWith("");
+            driver.Navigate().GoToUrl(baseURL + "/");
             //string test = driver.FindElement(By.Id("lst-ib")).GetAttribute("value");
             //string test2 = driver.FindElement(By.Id("lst-ib")).GetAttribute("class");
             //driver.FindElement(By.Name("btnG")).Click();
@@ -115,7 +121,7 @@ namespace SmapleProject
             //driver.FindElements(By.LinkText("Services")).Where(r => r.Displayed).ToArray(); ;
             //IWebElement e2 = driver.FindElement(By.Name("destination"));
             //action.ContextClick(e1).Perform();
-            //Thread.Sleep(TimeSpan.FromSeconds(5));
+            Thread.Sleep(TimeSpan.FromSeconds(5));
             CleanUp(driver);
         }
 
