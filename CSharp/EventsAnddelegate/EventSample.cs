@@ -4,7 +4,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace CSharp
+//namespace CSharp.EventsAnddelegate
 //{
 //    class EventSample
 //    {

@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventSampleMSDN.cs" />
-    <Compile Include="TimeOfTick.cs" />
-    <Compile Include="EventSample.cs" />
+    <Compile Include="EventsAnddelegate\EventSampleMSDN.cs" />
+    <Compile Include="EventsAnddelegate\TimeOfTick.cs" />
+    <Compile Include="EventsAnddelegate\EventSample.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
