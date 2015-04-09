@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium", "GridAndGalio\Selenium.csproj", "{DD20AA22-6411-4272-AE46-8CD500C3BED2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumGrid", "GridAndGalio\SeleniumGrid.csproj", "{DD20AA22-6411-4272-AE46-8CD500C3BED2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjAndAppConfig", "PageObjetcAndAppConfig\GuiTests\PageObjAndAppConfig.csproj", "{D1A310D4-21DB-4FD6-AA1F-992471388D48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowAndPageSelenium", "SpecFlowAndPageSelenium\AcceptanceTest\SpecFlowAndPageSelenium.csproj", "{314942CE-F292-4859-B821-991D00E98580}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "SpecFlowAndPageSelenium\Framework\Framework.csproj", "{A26B6105-CD3A-429B-A09D-AB51772AE4F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{60334CC4-F5F6-4D2D-AA1A-EBEF18862EF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{A26B6105-CD3A-429B-A09D-AB51772AE4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A26B6105-CD3A-429B-A09D-AB51772AE4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A26B6105-CD3A-429B-A09D-AB51772AE4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60334CC4-F5F6-4D2D-AA1A-EBEF18862EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60334CC4-F5F6-4D2D-AA1A-EBEF18862EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60334CC4-F5F6-4D2D-AA1A-EBEF18862EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60334CC4-F5F6-4D2D-AA1A-EBEF18862EF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

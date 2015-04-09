@@ -105,8 +105,10 @@ namespace SmapleProject
             driver.Navigate().GoToUrl(baseURL + "/");
             driver.FindElement(By.Id("lst-ib")).Clear();
             driver.FindElement(By.Id("lst-ib")).SendKeys("Testing");
-            driver.FindElement(By.Id("body")).SendKeys(Keys.Control + "t");
-            driver.FindElement(By.Id("body")).Text.Should().Contain("").And.StartWith("").And.EndWith("");
+            //driver.FindElement(By.Id("body")).SendKeys(Keys.Control + "t");
+            //driver.FindElement(By.Id("body")).SendKeys(Keys.Control + Keys.Tab);
+            string a = driver.FindElement(By.Id("lst-ib")).Text;
+            driver.FindElement(By.Id("lst-ib")).GetAttribute("value").Should().Contain("t").And.StartWith("Tes").And.EndWith("ing");
             driver.Navigate().GoToUrl(baseURL + "/");
             //string test = driver.FindElement(By.Id("lst-ib")).GetAttribute("value");
             //string test2 = driver.FindElement(By.Id("lst-ib")).GetAttribute("class");
