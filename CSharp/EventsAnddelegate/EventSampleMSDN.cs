@@ -8,7 +8,7 @@ namespace CSharp.EventsAnddelegate
         {
             Counter c = new Counter(new Random().Next(10));
             c.ThresholdReached += c_ThresholdReached;
-
+    
             Console.WriteLine("press 'a' key to increase total");
             while (Console.ReadKey(true).KeyChar == 'a')
             {
@@ -45,9 +45,6 @@ namespace CSharp.EventsAnddelegate
                 OnThresholdReached(args);
             }
         }
-
-        static abstract void function()
-        {}
 
         protected virtual void OnThresholdReached(ThresholdReachedEventArgs e)
         {
