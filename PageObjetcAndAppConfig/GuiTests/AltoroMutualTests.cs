@@ -9,6 +9,10 @@ using Structura.GuiTests.PageObjects;
 using Structura.GuiTests.SeleniumHelpers;
 using Structura.GuiTests.Utilities;
 using Tests.PageObjects;
+using System.Collections.Generic;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using System.IO;
 
 namespace Structura.GuiTests
 {
@@ -40,6 +44,38 @@ namespace Structura.GuiTests
                 // Ignore errors if we are unable to close the browser
             }
             _verificationErrors.ToString().Should().BeEmpty("No verification errors are expected.");
+        }
+
+        [Test]
+        public void Sample()
+        {
+            //_driver.Navigate().GoToUrl("http://newtours.demoaut.com/");
+            ////width attribute is unique for table
+            //string test = _driver.FindElement(By.XPath("//table[@width=\"270\"]/tbody/tr[4]/td")).Text;
+
+            //_driver.Navigate().GoToUrl("http://guru99.com/");
+            //IReadOnlyCollection<IWebElement> dateBox = _driver.FindElements(By.XPath("//h2[contains(text(),'A few of our most popular courses')]/parent::div//div[//a[text()='SELENIUM']]/following-sibling::div[@class='rt-grid-2 rt-omega']"));
+            //IReadOnlyCollection<IWebElement> dateBox1 = _driver.FindElements(By.XPath("//div[.//a[text()='SELENIUM']]/ancestor::div[@class='rt-grid-2 rt-omega']/following-sibling::div"));
+            ////Print all the which are sibling of the the element named as 'SELENIUM' in 'Popular course'
+
+            //foreach (IWebElement webElement in dateBox1)
+            //{
+
+            //    Console.WriteLine(webElement.Text);
+            //}
+
+            //_driver.Navigate().GoToUrl("https://paashq.shephertz.com/#");
+            File.OpenRead("");
+            _driver.Url = "https://paashq.shephertz.com/#";
+            //_driver.FindElement(By.LinkText("Log in with GitHub")).Click();
+            Actions oAct = new Actions(_driver);
+            oAct.SendKeys(Keys.Alt + Keys.F4).Build().Perform();
+            new WebDriverWait(_driver, TimeSpan.FromSeconds(5)).Until(ExpectedConditions.ElementExists(By.Id("a")));
+            //new WebDriverWait(_driver, TimeSpan.FromSeconds(5)).Until(waitDriver => waitDriver.FindElement(By.Id("a")));
+            WebDriverWait waitDriver = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+            IWebElement element = waitDriver.Until(drv => drv.FindElement(By.Id("a")));
+            //Excel Op, PDF, Screnshots, Video, FlashPlayer
+            Console.ReadLine();
         }
 
         [Test]

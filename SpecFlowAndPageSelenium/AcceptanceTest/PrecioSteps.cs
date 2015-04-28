@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using TechTalk.SpecFlow;
 
 namespace AcceptanceTest
@@ -6,22 +7,31 @@ namespace AcceptanceTest
     [Binding]
     public class PrecioSteps
     {
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        Calculator _calculator;
+        int _result;
+
+        [BeforeScenario()]
+        public void Setup()
         {
-            ScenarioContext.Current.Pending();
+            _calculator = new Calculator();
+        }
+
+        [Given(@"I have entered (.*) into the calculator")]
+        public void GivenIHaveEnteredIntoTheCalculator(int enteredValue)
+        {
+            _calculator.Number(enteredValue);
         }
         
         [When(@"I press add")]
         public void WhenIPressAdd()
         {
-            ScenarioContext.Current.Pending();
+            _result = _calculator.Add();
         }
         
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        public void ThenTheResultShouldBeOnTheScreen(int expectedValue)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(_result, expectedValue);
         }
     }
 }

@@ -27,8 +27,8 @@ namespace SmapleProject
     //[Row("internet explorer", "11.0", "WINDOWS")] // run all tests in the fixture against iexplore 11 for windows 7
     //[Row("chrome", "41.0", "WINDOWS")]
     //[Row("chrome", "41.0", "WINDOWS")]
+    //[Parallelizable] 
     #endregion
-    //[Parallelizable]
     [Category("First")]
     [TestFixture]
     public class GridTest2

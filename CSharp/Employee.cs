@@ -23,7 +23,7 @@ namespace CSharp
     { 
         static A()
         { }
-        A()
+        internal A()
         { }
         internal virtual int Add(int first , int second)
         {
@@ -40,7 +40,7 @@ namespace CSharp
         internal DerivedEmployee()
             : base(10)
         { }
-        internal override  int Add(int first, int second)
+        internal override int Add(int first, int second)
         {
             return first * second;
         }
@@ -50,13 +50,16 @@ namespace CSharp
     {
         //static void Main()
         //{
-        //    //DerivedEmployee objA = new DerivedEmployee();
-        //    //((A)objA).Add(2, 3);
+        //    DerivedEmployee oDer = new DerivedEmployee();
+        //    DerivedEmployee oTest = new A() as DerivedEmployee;
+        //    oTest.Add(2, 3);
+
+        //    //oDer.Add(2, 3);
         //    //Console.WriteLine(objA.Add(2, 3));
         //    string first = "f";
         //    string second = "s";
         //    first = first + second;
-        //    Console.WriteLine("{0}, {1}", first,second);
+        //    Console.WriteLine("{0}, {1}", first, second);
         //    // Keep the console window open in debug mode.
         //    Console.WriteLine("Press any key to exit");
         //    Console.ReadLine();

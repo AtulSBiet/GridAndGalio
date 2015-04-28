@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignPattern\ObserverPattern\ConsoleObserver.cs" />
+    <Compile Include="DesignPattern\ObserverPattern\IObserver.cs" />
+    <Compile Include="DesignPattern\ObserverPattern\ISubject.cs" />
+    <Compile Include="DesignPattern\ObserverPattern\Observer.cs" />
+    <Compile Include="DesignPattern\ObserverPattern\Subject.cs" />
     <Compile Include="EventsAnddelegate\EventSampleMSDN.cs" />
     <Compile Include="EventsAnddelegate\TimeOfTick.cs" />
     <Compile Include="EventsAnddelegate\EventSample.cs" />

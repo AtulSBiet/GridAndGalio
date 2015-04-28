@@ -1,66 +1,66 @@
-﻿using System;
+﻿//using System;
 
-namespace CSharp.EventsAnddelegate
-{
-    class EventSampleMSDN
-    {
-        static void Main(string[] args)
-        {
-            Counter c = new Counter(new Random().Next(10));
-            c.ThresholdReached += c_ThresholdReached;
-    
-            Console.WriteLine("press 'a' key to increase total");
-            while (Console.ReadKey(true).KeyChar == 'a')
-            {
-                Console.WriteLine("adding one");
-                c.Add(1);
-            }
-        }
+//namespace CSharp.EventsAnddelegate
+//{
+//    class EventSampleMSDN
+//    {
+//        static void Main(string[] args)
+//        {
+//            Counter c = new Counter(new Random().Next(10));
+//            c.ThresholdReached += c_ThresholdReached;
 
-        static void c_ThresholdReached(object sender, ThresholdReachedEventArgs e)
-        {
-            Console.WriteLine("The threshold of {0} was reached at {1}.", e.Threshold,  e.TimeReached);
-            Environment.Exit(0);
-        }
-    }
+//            Console.WriteLine("press 'a' key to increase total");
+//            while (Console.ReadKey(true).KeyChar == 'a')
+//            {
+//                Console.WriteLine("adding one");
+//                c.Add(1);
+//            }
+//        }
 
-    class Counter
-    {
-        private int threshold;
-        private int total;
+//        static void c_ThresholdReached(object sender, ThresholdReachedEventArgs e)
+//        {
+//            Console.WriteLine("The threshold of {0} was reached at {1}.", e.Threshold,  e.TimeReached);
+//            Environment.Exit(0);
+//        }
+//    }
 
-        public Counter(int passedThreshold)
-        {
-            threshold = passedThreshold;
-        }
+//    class Counter
+//    {
+//        private int threshold;
+//        private int total;
 
-        public void Add(int x)
-        {
-            total += x;
-            if (total >= threshold)
-            {
-                ThresholdReachedEventArgs args = new ThresholdReachedEventArgs();
-                args.Threshold = threshold;
-                args.TimeReached = DateTime.Now;
-                OnThresholdReached(args);
-            }
-        }
+//        public Counter(int passedThreshold)
+//        {
+//            threshold = passedThreshold;
+//        }
 
-        protected virtual void OnThresholdReached(ThresholdReachedEventArgs e)
-        {
-            EventHandler<ThresholdReachedEventArgs> handler = ThresholdReached;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
-        }
+//        public void Add(int x)
+//        {
+//            total += x;
+//            if (total >= threshold)
+//            {
+//                ThresholdReachedEventArgs args = new ThresholdReachedEventArgs();
+//                args.Threshold = threshold;
+//                args.TimeReached = DateTime.Now;
+//                OnThresholdReached(args);
+//            }
+//        }
 
-        public event EventHandler<ThresholdReachedEventArgs> ThresholdReached;
-    }
+//        protected virtual void OnThresholdReached(ThresholdReachedEventArgs e)
+//        {
+//            EventHandler<ThresholdReachedEventArgs> handler = ThresholdReached;
+//            if (handler != null)
+//            {
+//                handler(this, e);
+//            }
+//        }
 
-    public class ThresholdReachedEventArgs : EventArgs
-    {
-        public int Threshold { get; set; }
-        public DateTime TimeReached { get; set; }
-    }
-}
+//        public event EventHandler<ThresholdReachedEventArgs> ThresholdReached;
+//    }
+
+//    public class ThresholdReachedEventArgs : EventArgs
+//    {
+//        public int Threshold { get; set; }
+//        public DateTime TimeReached { get; set; }
+//    }
+//}
