@@ -31,27 +31,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Emgu.CV, Version=2.4.2.1773, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Eyes.Selenium.1.50\lib\net40\Emgu.CV.dll</HintPath>
+      <HintPath>..\..\packages\Eyes.Selenium.1.55\lib\net40\Emgu.CV.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Eyes.Sdk.DotNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Eyes.Selenium.1.50\lib\net40\Eyes.Sdk.DotNet.dll</HintPath>
+      <HintPath>..\..\packages\Eyes.Selenium.1.55\lib\net40\Eyes.Sdk.DotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Eyes.Selenium.DotNet, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Eyes.Selenium.1.50\lib\net40\Eyes.Selenium.DotNet.dll</HintPath>
+      <HintPath>..\..\packages\Eyes.Selenium.1.55\lib\net40\Eyes.Selenium.DotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Eyes.Selenium.1.50\lib\net40\Ionic.Zip.dll</HintPath>
+      <HintPath>..\..\packages\Eyes.Selenium.1.55\lib\net40\Ionic.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Eyes.Selenium.1.50\lib\net40\log4net.dll</HintPath>
+      <HintPath>..\..\packages\Eyes.Selenium.1.55\lib\net40\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Eyes.Selenium.1.50\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Eyes.Selenium.1.55\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -62,11 +62,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebDriver">
-      <HintPath>..\..\packages\Selenium.WebDriver.2.40.0\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=2.53.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Selenium.WebDriver.2.53.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\..\packages\Selenium.WebDriver.2.40.0\lib\net40\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=2.53.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Selenium.Support.2.53.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
